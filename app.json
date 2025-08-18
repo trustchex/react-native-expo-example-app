@@ -10,7 +10,9 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.trustchex.reactnativesdk.expo.exampleapp"
+      "bundleIdentifier": "com.trustchex.reactnativesdk.expo.exampleapp",
+      "deploymentTarget": "16.0",
+      "appleTeamId": "YZW56JT3LH"
     },
     "android": {
       "package": "com.trustchex.reactnativesdk.expo.exampleapp",
