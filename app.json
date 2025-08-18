@@ -11,7 +11,9 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.trustchex.reactnativesdk.expo.exampleapp",
-      "deploymentTarget": "16.0",
+      "infoPlist": {
+        "MinimumOSVersion": "16.0"
+      },
       "appleTeamId": "YZW56JT3LH"
     },
     "android": {
@@ -36,6 +38,19 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermissionText": "This app needs access to camera to scan documents.",
+          "enableMicrophonePermission": false
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": ["./assets/fonts/SpaceMono-Regular.ttf"]
         }
       ]
     ],

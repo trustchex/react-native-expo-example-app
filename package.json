@@ -57,9 +57,25 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~19.0.10",
+    "babel-preset-expo": "~13.0.0",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~9.2.0",
+    "react-native-svg-transformer": "^1.5.0",
     "typescript": "~5.8.3"
+  },
+  "expo": {
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "exclude": [
+          "@trustchex/react-native-sdk",
+          "@lottiefiles/dotlottie-react",
+          "react-native-fs",
+          "react-native-nfc-manager",
+          "react-native-tts"
+        ],
+        "listUnknownPackages": false
+      }
+    }
   },
   "private": true
 }

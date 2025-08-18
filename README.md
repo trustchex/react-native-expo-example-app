@@ -1,50 +1,155 @@
-# Welcome to your Expo app 👋
+# React Native Expo Example App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [**Expo**](https://expo.dev) with the TrustChex SDK integration.
 
-## Get started
+## Getting Started
 
-1. Install dependencies
+>**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-   ```bash
-   npm install
-   ```
+### Step 1: Install dependencies
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+First, you will need to install the project dependencies:
 
 ```bash
-npm run reset-project
+# using npm
+npm install
+
+# OR using Yarn
+yarn install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Step 2: Start the Metro Server
 
-## Learn more
+You will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
-To learn more about developing your project with Expo, look at the following resources:
+To start Metro, run the following command from the _root_ of your React Native project:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+# using npm
+npm start
 
-## Join the community
+# OR using Yarn
+yarn start
+```
 
-Join our community of developers creating universal apps.
+### Step 3: Start your Application
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+
+#### For Android
+
+```bash
+# using npm
+npm run android
+
+# OR using Yarn
+yarn android
+```
+
+#### For iOS
+
+```bash
+# using npm
+npm run ios
+
+# OR using Yarn
+yarn ios
+```
+
+#### For Web
+
+```bash
+# using npm
+npm run web
+
+# OR using Yarn
+yarn web
+```
+
+If everything is set up _correctly_, you should see your new app running in your _Android Emulator_, _iOS Simulator_, or _web browser_ shortly provided you have set up your emulator/simulator correctly.
+
+This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+
+## Step 4: Modifying your App
+
+Now that you have successfully run the app, let's modify it.
+
+1. Open `app/index.tsx` in your text editor of choice and edit some lines.
+2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+
+   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+
+## Expo Specifics
+
+This project uses Expo with the following configuration:
+
+- **Expo SDK**: 53.0.20
+- **Expo Router**: File-based routing system
+- **New Architecture**: Enabled for Fabric and TurboModules support
+
+### Expo Development Build
+
+This project supports Expo development builds. You can create a development build by running:
+
+```bash
+npx expo run:android
+npx expo run:ios
+```
+
+### EAS Build (Optional)
+
+For cloud builds, you can use EAS Build:
+
+```bash
+npm install -g eas-cli
+eas build --platform all
+```
+
+## Project Structure
+
+```
+├── app/                    # Expo Router pages
+│   ├── _layout.tsx        # Root layout
+│   ├── index.tsx          # Home screen
+│   └── +not-found.tsx    # 404 page
+├── assets/                # Static assets
+├── components/            # Reusable components
+├── constants/             # App constants
+├── hooks/                 # Custom hooks
+├── android/               # Native Android code
+├── ios/                   # Native iOS code
+├── app.json              # Expo configuration
+├── babel.config.js       # Babel configuration
+├── metro.config.js       # Metro bundler configuration
+└── tsconfig.json         # TypeScript configuration
+```
+
+## Features
+
+- **TrustChex SDK**: Document verification and identity validation
+- **Camera Integration**: react-native-vision-camera for document scanning
+- **Deep Linking**: Custom URL scheme support
+- **TypeScript**: Full TypeScript support
+- **SVG Support**: Vector graphics with react-native-svg
+- **Animations**: Smooth animations with react-native-reanimated
+
+## Troubleshooting
+
+If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+
+### Common Expo Issues
+
+- **Metro bundler issues**: Try clearing the cache with `npx expo start --clear`
+- **iOS build issues**: Make sure you have Xcode and iOS Simulator installed
+- **Android build issues**: Ensure Android Studio and SDK are properly configured
+
+## Learn More
+
+To learn more about React Native and Expo, take a look at the following resources:
+
+- [React Native Website](https://reactnative.dev) - learn more about React Native.
+- [Expo Documentation](https://docs.expo.dev) - learn about Expo features and API.
+- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
+- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
+- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
+- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
