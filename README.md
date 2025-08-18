@@ -1,12 +1,22 @@
 # React Native Expo Example App
 
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [**Expo**](https://expo.dev) with the TrustChex SDK integration.
+This is a [**React Native**](https://reactnative.dev) project, bootstrapped using [**Expo**](https://expo.dev) with the **TrustChex SDK** integration for identity verification and document validation.
 
-## Getting Started
+## Prerequisites
+
+Before getting started, ensure you have the following installed:
+
+- **Node.js** (v18 or later)
+- **npm** or **Yarn**
+- **Expo CLI** (`npm install -g @expo/cli`)
+- **Android Studio** (for Android development)
+- **Xcode** (for iOS development, macOS only)
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-### Step 1: Install dependencies
+## Getting Started
+
+### Step 1: Clone and Install Dependencies
 
 First, you will need to install the project dependencies:
 
@@ -18,11 +28,9 @@ npm install
 yarn install
 ```
 
-### Step 2: Start the Metro Server
+### Step 2: Start the Development Server
 
-You will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
-
-To start Metro, run the following command from the _root_ of your React Native project:
+To start the Expo development server, run the following command from the root of your project:
 
 ```bash
 # using npm
@@ -30,11 +38,12 @@ npm start
 
 # OR using Yarn
 yarn start
+
+# OR using Expo CLI directly
+npx expo start
 ```
 
-### Step 3: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+### Step 3: Run Your Application
 
 #### For Android
 
@@ -44,6 +53,9 @@ npm run android
 
 # OR using Yarn
 yarn android
+
+# OR using Expo CLI directly
+npx expo run:android
 ```
 
 #### For iOS
@@ -54,19 +66,14 @@ npm run ios
 
 # OR using Yarn
 yarn ios
+
+# OR using Expo CLI directly
+npx expo run:ios
 ```
 
-#### For Web
+> **Note**: This app requires native device capabilities (camera and NFC) and is not compatible with web browsers. You must run it on physical devices or simulators.
 
-```bash
-# using npm
-npm run web
-
-# OR using Yarn
-yarn web
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_, _iOS Simulator_, or _web browser_ shortly provided you have set up your emulator/simulator correctly.
+If everything is set up correctly, you should see your new app running in your Android Emulator or iOS Simulator shortly provided you have set up your emulator/simulator correctly.
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
@@ -75,17 +82,40 @@ This is one way to run your app — you can also run it directly from within And
 Now that you have successfully run the app, let's modify it.
 
 1. Open `app/index.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+2. For **Android**: Press the **R** key twice or select **"Reload"** from the **Developer Menu** (**Ctrl + M** on Windows and Linux or **Cmd ⌘ + M** on macOS) to see your changes!
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+   For **iOS**: Hit **Cmd ⌘ + R** in your iOS Simulator to reload the app and see your changes!
 
-## Expo Specifics
+## Expo Configuration
 
 This project uses Expo with the following configuration:
 
-- **Expo SDK**: 53.0.20
-- **Expo Router**: File-based routing system
+- **Expo SDK**: ~53.0.20
+- **React Native**: 0.79.5
+- **React**: 19.0.0
+- **Expo Router**: File-based routing system (~5.1.4)
 - **New Architecture**: Enabled for Fabric and TurboModules support
+- **TypeScript**: Full TypeScript support (~5.8.3)
+
+### Deep Linking
+
+The app supports deep linking with the custom URL scheme: `reactnativeexpoexampleapp://`
+
+### Required Permissions
+
+#### iOS
+
+- Camera access for document and face capture
+- Microphone access for video recording
+- NFC reading for document verification
+
+#### Android
+
+- `INTERNET` - Network access
+- `CAMERA` - Document and face capture
+- `NFC` - Document verification
+- `RECORD_AUDIO` - Video recording with audio
+- `VIBRATE` - Haptic feedback
 
 ### Expo Development Build
 
@@ -98,50 +128,111 @@ npx expo run:ios
 
 ### EAS Build (Optional)
 
-For cloud builds, you can use EAS Build:
+For cloud builds, you can use EAS Build for Android and iOS:
 
 ```bash
 npm install -g eas-cli
-eas build --platform all
+eas build --platform android
+eas build --platform ios
 ```
+
+> **Note**: Web builds are not supported due to camera and NFC dependencies.
 
 ## Project Structure
 
-```
+```text
 ├── app/                    # Expo Router pages
 │   ├── _layout.tsx        # Root layout
-│   ├── index.tsx          # Home screen
+│   ├── index.tsx          # Home screen (TrustChex integration)
 │   └── +not-found.tsx    # 404 page
 ├── assets/                # Static assets
-├── components/            # Reusable components
-├── constants/             # App constants
-├── hooks/                 # Custom hooks
+│   ├── fonts/             # Custom fonts
+│   └── images/            # App icons and images
+├── components/            # Reusable React components
+│   ├── ui/               # UI-specific components
+│   ├── Collapsible.tsx
+│   ├── ExternalLink.tsx
+│   ├── HapticTab.tsx
+│   ├── HelloWave.tsx
+│   ├── ParallaxScrollView.tsx
+│   ├── ThemedText.tsx
+│   └── ThemedView.tsx
+├── constants/             # App constants and themes
+├── hooks/                 # Custom React hooks
 ├── android/               # Native Android code
 ├── ios/                   # Native iOS code
+├── scripts/               # Build and utility scripts
 ├── app.json              # Expo configuration
 ├── babel.config.js       # Babel configuration
 ├── metro.config.js       # Metro bundler configuration
-└── tsconfig.json         # TypeScript configuration
+├── tsconfig.json         # TypeScript configuration
+└── package.json          # Dependencies and scripts
 ```
 
 ## Features
 
-- **TrustChex SDK**: Document verification and identity validation
-- **Camera Integration**: react-native-vision-camera for document scanning
-- **Deep Linking**: Custom URL scheme support
-- **TypeScript**: Full TypeScript support
-- **SVG Support**: Vector graphics with react-native-svg
-- **Animations**: Smooth animations with react-native-reanimated
+- **TrustChex SDK**: Document verification and identity validation (`@trustchex/react-native-sdk`)
+- **Camera Integration**: `react-native-vision-camera` for document scanning and video recording
+- **Deep Linking**: Custom URL scheme support with `expo-linking`
+- **TypeScript**: Full TypeScript support with strict type checking
+- **NFC Support**: NFC document reading with `react-native-nfc-manager`
+- **Image Processing**: Image editing with `@react-native-community/image-editor`
+- **Video Compression**: Video optimization with `react-native-compressor`
+- **Computer Vision**: OpenCV integration with `react-native-fast-opencv`
+- **File System**: File operations with `react-native-fs`
+- **Text-to-Speech**: Audio feedback with `react-native-tts`
+- **SVG Support**: Vector graphics with `react-native-svg`
+- **Animations**: Smooth animations with `react-native-reanimated`
+- **Material Design**: UI components with `react-native-paper`
+- **Gestures**: Touch handling with `react-native-gesture-handler`
+
+> **Platform Support**: This app is designed for **mobile platforms only** (Android and iOS). Web support is not available due to camera and NFC hardware requirements.
 
 ## Troubleshooting
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+### Common Issues
 
-### Common Expo Issues
+#### Expo/Metro Issues
 
-- **Metro bundler issues**: Try clearing the cache with `npx expo start --clear`
-- **iOS build issues**: Make sure you have Xcode and iOS Simulator installed
-- **Android build issues**: Ensure Android Studio and SDK are properly configured
+- **Metro bundler cache issues**: Try clearing the cache with `npx expo start --clear`
+- **Node modules issues**: Delete `node_modules` and run `npm install` again
+- **Expo CLI version**: Ensure you're using the latest Expo CLI: `npm install -g @expo/cli`
+
+#### iOS Build Issues
+
+- **Xcode requirements**: Make sure you have Xcode 14+ installed
+- **iOS Simulator**: Ensure iOS Simulator is properly configured
+- **Cocoapods issues**: Try `cd ios && pod install` if using bare workflow
+- **iOS deployment target**: Minimum iOS version is 16.0
+
+#### Android Build Issues
+
+- **Android Studio setup**: Ensure Android Studio and SDK are properly configured
+- **Java version**: Use Java 17 for optimal compatibility
+- **Gradle issues**: Try cleaning with `cd android && ./gradlew clean`
+- **Device permissions**: Ensure camera and NFC permissions are granted
+
+#### TrustChex SDK Issues
+
+- **Camera permissions**: Verify camera permissions are granted in device settings
+- **NFC availability**: NFC is only available on physical devices, not simulators
+- **Network connectivity**: Ensure stable internet connection for API calls
+- **Deep linking**: Test deep linking with a proper session URL
+
+For more help, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+
+### Development Tools
+
+```bash
+# Reset project to initial state
+npm run reset-project
+
+# Lint code
+npm run lint
+
+# Clear all caches
+npx expo start --clear --reset-cache
+```
 
 ## Learn More
 
