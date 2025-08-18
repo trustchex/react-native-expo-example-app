@@ -12,7 +12,20 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.trustchex.reactnativesdk.expo.exampleapp",
       "infoPlist": {
-        "MinimumOSVersion": "16.0"
+        "MinimumOSVersion": "16.0",
+        "NSCameraUsageDescription": "The app captures images of your ID, passport, and face, and records a video for secure identity verification and ensure compliance with KYC regulations.",
+        "NSMicrophoneUsageDescription": "The app records a video with audio for secure identity verification and ensure compliance with KYC regulations.",
+        "NFCReaderUsageDescription": "The app securely reads ID or passport data using NFC to verify your identity and ensure compliance with KYC regulations.",
+        "com.apple.developer.nfc.readersession.formats": ["NDEF", "TAG"],
+        "com.apple.developer.nfc.readersession.iso7816.select-identifiers": [
+          "A0000002471001",
+          "E80704007F00070302", 
+          "A000000167455349474E",
+          "A0000002480100",
+          "A0000002480200",
+          "A0000002480300",
+          "A00000045645444C2D3031"
+        ]
       },
       "appleTeamId": "YZW56JT3LH"
     },
@@ -24,12 +37,11 @@
       },
       "edgeToEdgeEnabled": true,
       "permissions": [
+        "android.permission.INTERNET",
         "android.permission.CAMERA",
+        "android.permission.NFC",
         "android.permission.RECORD_AUDIO",
-        "android.permission.READ_EXTERNAL_STORAGE",
-        "android.permission.WRITE_EXTERNAL_STORAGE",
-        "android.permission.READ_MEDIA_IMAGES",
-        "android.permission.READ_MEDIA_VIDEO"
+        "android.permission.VIBRATE"
       ]
     },
     "web": {
@@ -51,9 +63,9 @@
       [
         "react-native-vision-camera",
         {
-          "cameraPermissionText": "This app needs camera access to capture identity documents and perform identity verification.",
+          "cameraPermissionText": "The app captures images of your ID, passport, and face, and records a video for secure identity verification and ensure compliance with KYC regulations.",
           "enableMicrophonePermission": true,
-          "microphonePermissionText": "This app needs microphone access for identity verification purposes."
+          "microphonePermissionText": "The app records a video with audio for secure identity verification and ensure compliance with KYC regulations."
         }
       ],
       [
