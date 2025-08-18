@@ -3,8 +3,9 @@ module.exports = function (api) {
   return {
     presets: ['babel-preset-expo'],
     plugins: [
-      // Required for expo-router
-      'expo-router/babel',
+      // Required for TrustChex SDK
+      'react-native-worklets-core/plugin',
+      'react-native-paper/babel',
       // Required for react-native-reanimated
       'react-native-reanimated/plugin',
     ],

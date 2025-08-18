@@ -1,10 +1,13 @@
-import React from 'react';
-import { AppState, Linking } from 'react-native';
-import Trustchex, { handleDeepLink } from '@trustchex/react-native-sdk';
+import { NavigationIndependentTree } from "@react-navigation/native";
+import Trustchex, { handleDeepLink } from "@trustchex/react-native-sdk";
+import React from "react";
+import { AppState, Linking } from "react-native";
 
 export default function App() {
   const appState = React.useRef(AppState.currentState);
-  const [baseUrl, setBaseUrl] = React.useState<string | undefined>("https://app.trustchex.com");
+  const [baseUrl, setBaseUrl] = React.useState<string | undefined>(
+    "https://app.trustchex.com"
+  );
   const [sessionId, setSessionId] = React.useState<string>("");
 
   React.useEffect(() => {
@@ -42,15 +45,17 @@ export default function App() {
   }, [appState]);
 
   return (
-    <Trustchex
-      baseUrl={baseUrl}
-      sessionId={sessionId}
-      onCompleted={() => {
-        // console.log('Verification completed');
-      }}
-      onError={(_error) => {
-        // console.error('Verification error:', error);
-      }}
-    />
+    <NavigationIndependentTree>
+      <Trustchex
+        baseUrl={baseUrl}
+        sessionId={sessionId}
+        onCompleted={() => {
+          // console.log('Verification completed');
+        }}
+        onError={(_error) => {
+          // console.error('Verification error:', error);
+        }}
+      />
+    </NavigationIndependentTree>
   );
 }
