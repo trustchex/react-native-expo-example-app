@@ -11,8 +11,9 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.trustchex.reactnativesdk.expo.exampleapp",
+      "deploymentTarget": "16.6",
       "infoPlist": {
-        "MinimumOSVersion": "16.0",
+        "MinimumOSVersion": "16.6",
         "NSCameraUsageDescription": "The app captures images of your ID, passport, and face, and records a video for secure identity verification and ensure compliance with KYC regulations.",
         "NSMicrophoneUsageDescription": "The app records a video with audio for secure identity verification and ensure compliance with KYC regulations.",
         "NFCReaderUsageDescription": "The app securely reads ID or passport data using NFC to verify your identity and ensure compliance with KYC regulations.",
