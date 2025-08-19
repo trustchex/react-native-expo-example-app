@@ -1585,9 +1585,9 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-nfc-manager (3.16.2):
+  - react-native-nfc-manager (3.16.3):
     - React-Core
-  - react-native-safe-area-context (5.6.0):
+  - react-native-safe-area-context (5.6.1):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1602,8 +1602,8 @@ PODS:
     - React-hermes
     - React-ImageManager
     - React-jsi
-    - react-native-safe-area-context/common (= 5.6.0)
-    - react-native-safe-area-context/fabric (= 5.6.0)
+    - react-native-safe-area-context/common (= 5.6.1)
+    - react-native-safe-area-context/fabric (= 5.6.1)
     - React-NativeModulesApple
     - React-RCTFabric
     - React-renderercss
@@ -1613,7 +1613,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-safe-area-context/common (5.6.0):
+  - react-native-safe-area-context/common (5.6.1):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1637,7 +1637,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-safe-area-context/fabric (5.6.0):
+  - react-native-safe-area-context/fabric (5.6.1):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -2370,7 +2370,7 @@ PODS:
   - SocketRocket (0.7.1)
   - TextToSpeech (4.1.1):
     - React-Core
-  - TrustchexSDK (1.163.10):
+  - TrustchexSDK (1.164.2):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -2832,8 +2832,8 @@ SPEC CHECKSUMS:
   react-native-fast-opencv: 719bfcf81ed96f3c635b4b89ca1dec58dc91ca47
   react-native-get-random-values: d16467cf726c618e9c7a8c3c39c31faa2244bbba
   react-native-image-editor: 7fe198b211abe005aa85b48420a58174b5dcae8b
-  react-native-nfc-manager: 7057a9c593c369fa0829a0263530ff2922a7465a
-  react-native-safe-area-context: f0f631086ac8e569b5cd7911e4403cd96cd31915
+  react-native-nfc-manager: 66a00e5ddab9704efebe19d605b1b8afb0bb1bd7
+  react-native-safe-area-context: 895c49ee2613865f90318789be89a8e286fe7b69
   react-native-video: 8b867791128487bf82c9b6070ceddd2697bfabec
   react-native-webview: 85c8fc8ca09f4e67b68afbc86207a1442af5dc80
   react-native-worklets-core: 4552528ad7eae12030f7b6c572f00fc868ec7b5e
@@ -2879,7 +2879,7 @@ SPEC CHECKSUMS:
   SDWebImageWebPCoder: e38c0a70396191361d60c092933e22c20d5b1380
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   TextToSpeech: 89b239221ec378d213af422d14789a729705360b
-  TrustchexSDK: 9dce81bcd6d3a36ac699ec6222678adb5a00b338
+  TrustchexSDK: 846b1c16b9163308f6fe49da3aee463444a7e38e
   VisionCamera: 7e17e56cca70c88d6fdcae0257f7c0bcc54c8b2f
   Yoga: adb397651e1c00672c12e9495babca70777e411e
 
