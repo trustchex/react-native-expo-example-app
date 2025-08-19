@@ -50,10 +50,10 @@ export default function App() {
         baseUrl={baseUrl}
         sessionId={sessionId}
         onCompleted={() => {
-          // console.log('Verification completed');
+          console.log('Verification completed');
         }}
-        onError={(_error) => {
-          // console.error('Verification error:', error);
+        onError={(error) => {
+          console.error('Verification error:', error);
         }}
       />
     </NavigationIndependentTree>
