@@ -11,4 +11,11 @@
 -keep class com.swmansion.reanimated.** { *; }
 -keep class com.facebook.react.turbomodule.** { *; }
 
+# react-native-vision-camera
+-keep class com.mrousavy.camera.** { *; }
+-keep class com.mrousavy.camera.frameprocessor.** { *; }
+
+# react-native-worklets-core
+-keep class com.margelo.worklets.** { *; }
+
 # Add any project specific keep options here:
