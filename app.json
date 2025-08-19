@@ -67,12 +67,6 @@
           "enableMicrophonePermission": true,
           "microphonePermissionText": "The app records a video with audio for secure identity verification and ensure compliance with KYC regulations."
         }
-      ],
-      [
-        "expo-font",
-        {
-          "fonts": ["./assets/fonts/SpaceMono-Regular.ttf"]
-        }
       ]
     ],
     "experiments": {
