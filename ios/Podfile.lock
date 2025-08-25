@@ -2370,7 +2370,7 @@ PODS:
   - SocketRocket (0.7.1)
   - TextToSpeech (4.1.1):
     - React-Core
-  - TrustchexSDK (1.175.2):
+  - TrustchexSDK (1.175.5):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -2879,7 +2879,7 @@ SPEC CHECKSUMS:
   SDWebImageWebPCoder: e38c0a70396191361d60c092933e22c20d5b1380
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   TextToSpeech: 89b239221ec378d213af422d14789a729705360b
-  TrustchexSDK: fda14bc1694ebbfd1cc848efd2419ffadf6f9521
+  TrustchexSDK: a1989c850e9d5e608d64e13e2623232e7191ff92
   VisionCamera: 7e17e56cca70c88d6fdcae0257f7c0bcc54c8b2f
   Yoga: adb397651e1c00672c12e9495babca70777e411e
 
