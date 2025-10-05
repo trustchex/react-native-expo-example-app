@@ -1,12 +1,22 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+  ext {
+    buildToolsVersion = "36.0.0"
+    minSdkVersion = 31
+    compileSdkVersion = 36
+    targetSdkVersion = 36
+    // Updated to NDK r28 for native 16 KB page size support
+    ndkVersion = "28.2.13676358"
+    kotlinVersion = "2.0.21"
+  }
   repositories {
     google()
     mavenCentral()
   }
   dependencies {
-    classpath('com.android.tools.build:gradle')
+    // Explicitly set AGP 8.7.3 for 16 KB page size support
+    classpath('com.android.tools.build:gradle:8.7.3')
     classpath('com.facebook.react:react-native-gradle-plugin')
     classpath('org.jetbrains.kotlin:kotlin-gradle-plugin')
   }
