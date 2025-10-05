@@ -48,6 +48,8 @@
     <key>NSCameraUsageDescription</key>
     <string>The app captures images of your ID, passport, and face, and records a video for secure
       identity verification and ensure compliance with KYC regulations.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>This app does not use your location. This permission is required by third-party dependencies but location features are not accessed.</string>
     <key>NSMicrophoneUsageDescription</key>
     <string>The app records a video with audio for secure identity verification and ensure
       compliance with KYC regulations.</string>
