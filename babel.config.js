@@ -5,7 +5,6 @@ module.exports = function (api) {
     plugins: [
       // Required for TrustChex SDK
       'react-native-worklets-core/plugin',
-      'react-native-paper/babel',
       // Required for react-native-reanimated
       'react-native-reanimated/plugin',
     ],
