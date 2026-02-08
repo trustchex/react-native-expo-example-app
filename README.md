@@ -182,7 +182,7 @@ eas build --platform ios
 - **File System**: File operations with `react-native-fs`
 - **Text-to-Speech**: Audio feedback with `react-native-tts`
 - **SVG Support**: Vector graphics with `react-native-svg`
-- **Animations**: Smooth animations with `react-native-reanimated`
+- **Animations**: Smooth animations with `react-native-svg` and Lottie
 - **Gestures**: Touch handling with `react-native-gesture-handler`
 
 > **Platform Support**: This app is designed for **mobile platforms only** (Android and iOS). Web support is not available due to camera and NFC hardware requirements.
