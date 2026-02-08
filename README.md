@@ -172,18 +172,15 @@ eas build --platform ios
 ## Features
 
 - **TrustChex SDK**: Document verification and identity validation (`@trustchex/react-native-sdk`)
-- **Camera Integration**: `react-native-vision-camera` for document scanning and video recording
 - **Deep Linking**: Custom URL scheme support with `expo-linking`
 - **TypeScript**: Full TypeScript support with strict type checking
 - **NFC Support**: NFC document reading with `react-native-nfc-manager`
 - **Image Processing**: Image editing with `@react-native-community/image-editor`
 - **Video Compression**: Video optimization with `react-native-compressor`
-- **Computer Vision**: OpenCV integration with `react-native-fast-opencv`
 - **File System**: File operations with `react-native-fs`
 - **Text-to-Speech**: Audio feedback with `react-native-tts`
 - **SVG Support**: Vector graphics with `react-native-svg`
 - **Animations**: Smooth animations with `react-native-svg` and Lottie
-- **Gestures**: Touch handling with `react-native-gesture-handler`
 
 > **Platform Support**: This app is designed for **mobile platforms only** (Android and iOS). Web support is not available due to camera and NFC hardware requirements.
 
