@@ -55,14 +55,6 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ],
-      [
-        "react-native-vision-camera",
-        {
-          "cameraPermissionText": "The app captures images of your ID, passport, and face, and records a video for secure identity verification and ensure compliance with KYC regulations.",
-          "enableMicrophonePermission": true,
-          "microphonePermissionText": "The app records a video with audio for secure identity verification and ensure compliance with KYC regulations."
-        }
       ]
     ],
     "experiments": {
