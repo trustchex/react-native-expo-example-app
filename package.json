@@ -1,7 +1,7 @@
 {
   "name": "react-native-expo-example-app",
   "main": "expo-router/entry",
-  "version": "1.481.2",
+  "version": "1.481.3",
   "scripts": {
     "start": "expo start",
     "android": "expo run:android",
